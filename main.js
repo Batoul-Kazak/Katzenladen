@@ -2,6 +2,17 @@
 let nav = document.querySelector(".nav");
 let header = document.querySelector("header");
 
+let catsContainer = document.querySelector("#cats");
+
+let initialCoords = catsContainer.getBoundingClientRect();
+
+window.addEventListener("scroll", function() {
+    if(window.scrollY > initialCoords.top)
+        header.classList.add("sticky"); 
+    else 
+        header.classList.remove("sticky");
+});
+
 let hoverHandler = function(e) {
     if(e.target.classList.contains("nav-link"))
     {
@@ -44,6 +55,4 @@ tabsContainer.addEventListener("click", function(e) {
 
     document.querySelector(`.content-${clicked.dataset.tab}`).classList.add("content--active");
 });
-
-//Implement sticky navigation
 
