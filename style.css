@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 5rem;
+
+    background-color: #111;
+
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    place-items: center;
+
+    background-color: #333333;
+    padding:1rem;
+
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+    margin-right: 40px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.line {
+    background-image: linear-gradient(30deg, crimson, orangered);
+    height: 5px;
+    width: 0;
+    transition: 250ms;
+    place-self: center;
+}
+
+li:hover .line{
+    width: 100%;
+}
+
+#logo {
+    /* font-weight: bold; */
+    /* padding: 0.5rem 2rem; */
+    border-radius: 100%;
+    margin-left: 40px;
+    /* color: rgb(0, 0, 55); */
+    font-weight: bold;
+    color: orangered;
+    text-shadow: 1px 1px 1px red;
+
+    background-image: url(./images/logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+#logo:hover {
+    border: 2px solid orangered;
+    transform: rotate(360deg);
+}
+
+li {
+    list-style-type: none;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* place-content: center; */
+    /* place-items: center; */
+}
+
+h1#welcome {
+    background-color: white;
+    background-image: linear-gradient(45deg, red, blue);
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 2px 2px 1px white;
+    width: 80%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    /* gap: 10px; */
+
+    width: 50%;
+
+}
+
+section #tabs-container {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 3rem;
+}
+
+section #tabs-container button {
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    border: none;
+    transform: translateY(20px);
+    box-shadow: 3px 3px 3px #222;
+    width: 9rem;
+    height: 3rem;
+    transition: 250ms;
+    border-radius: 3rem;
+}
+
+section #tabs-container > :first-child {
+    background-color: crimson;
+}
+
+section #tabs-container > :nth-child(2) {
+    background-color: lightseagreen;
+}
+
+section #tabs-container > :nth-child(3) {
+    background-color: greenyellow;
+}
+
+section #tabs-container span {
+    font-weight: bold;
+}
+
+section #content-container img {
+    width: 30%;
+    height: 80%;
+    /* display: none; */
+}
+
+section #content-container > div {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+
+    display: none;
+    padding: 2rem;
+    border-radius: 1rem;
+} 
+
+.content--active {
+    display: flex !important;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    background-color: rgba(250, 128, 114, 0.698);
+    box-shadow: 10px 10px 10px #000;
+    text-shadow: 1px 1px 1px #555;
+    text-align: justify;
+}
+
+.tab--active {
+    transform: translateY(5px) !important;
+    background-color: yellow;
+}
+
+#cats {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 3rem;
+    width: 80%;
+}
+
+#cats .cat {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+}
+
+#cats .cat img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 10px;
+    transform: rotate(5deg);
+    border: 5px groove orchid;
+    box-shadow: 10px 10px 10px #000;
+}
+
+.cat p {
+    background-color: white;
+    background-image: linear-gradient(45deg, rgb(216, 216, 216), rgb(124, 124, 255));
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.even-img {
+    transform: rotate(-5deg) !important;
+    border: 5px groove gold !important;
+}
