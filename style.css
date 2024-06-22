@@ -218,3 +218,21 @@ section #content-container > div {
     transform: rotate(-5deg) !important;
     border: 5px groove gold !important;
 }
+
+.cat button {
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(0, 118, 244);
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+    transition: 100ms;
+    /* font-size: 0.9rem; */
+}
+
+.cat button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border: 2px solid white;
+    background-color: orangered;
+}
